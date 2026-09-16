@@ -108,15 +108,26 @@ a:hover { text-decoration: underline; }
 
 /* ---------- about ---------- */
 
-.links {
+.iconlinks {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  margin-top: 2.5rem;
-  padding-top: 1.6rem;
-  border-top: 1px solid var(--rule);
-  font-size: 0.95rem;
+  align-items: center;
+  gap: 1.15rem;
+  margin: 0.2rem 0 2.6rem;
 }
+
+.iconlinks a {
+  display: inline-flex;
+  color: var(--muted);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.iconlinks a:hover {
+  color: var(--fg);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.iconlinks svg { display: block; }
 
 .facts {
   list-style: none;
