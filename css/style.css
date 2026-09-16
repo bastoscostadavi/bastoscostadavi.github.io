@@ -1,19 +1,22 @@
 :root {
-  --bg: #ffffff;
-  --fg: #1d1d1f;
-  --muted: #6e6e73;
-  --rule: #e5e5e7;
-  --link: #0066cc;
+  /* warm ivory / slate palette */
+  --bg: #faf9f5;
+  --fg: #1f1e1d;
+  --muted: #5e5d59;
+  --rule: #e8e6dc;
+  --link: #a6522e;
+  --link-hover: #8a3f1f;
   --maxw: 760px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #000000;
-    --fg: #f5f5f7;
-    --muted: #8e8e93;
-    --rule: #2a2a2c;
-    --link: #4da2ff;
+  :root:not([data-theme="light"]) {
+    --bg: #1f1e1d;
+    --fg: #f0eee6;
+    --muted: #b0aea5;
+    --rule: #3d3d3a;
+    --link: #e0997b;
+    --link-hover: #f0b9a0;
   }
 }
 
@@ -96,7 +99,7 @@ a {
   text-decoration: none;
 }
 
-a:hover { text-decoration: underline; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
 
 /* ---------- about ---------- */
 
@@ -186,7 +189,7 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--rule);
   border-radius: 8px;
   background: #fff;
-  padding: 6px;
+  padding: 8px;
 }
 
 .paper h3 {
