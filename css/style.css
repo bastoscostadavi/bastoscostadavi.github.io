@@ -47,14 +47,6 @@ nav {
   gap: 1.6rem;
 }
 
-.nav-name {
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-right: auto;
-  color: var(--fg);
-  text-decoration: none;
-}
-
 nav a {
   color: var(--muted);
   text-decoration: none;
@@ -64,7 +56,7 @@ nav a {
 
 nav a:hover { color: var(--fg); }
 
-nav a[aria-current="page"] { color: var(--fg); }
+nav a[aria-current="page"] { color: var(--fg); font-weight: 600; }
 
 /* ---------- layout ---------- */
 
@@ -107,6 +99,27 @@ a {
 a:hover { text-decoration: underline; }
 
 /* ---------- about ---------- */
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 1.9rem;
+  margin-bottom: 2.6rem;
+}
+
+.intro-text { min-width: 0; }
+
+.intro h1 { margin-bottom: 0.45rem; }
+
+.intro .iconlinks { margin: 0; }
+
+.portrait {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 .iconlinks {
   display: flex;
@@ -222,6 +235,8 @@ details.abs[open] > summary::after { content: " ‹"; }
 
 @media (max-width: 640px) {
   main { padding-top: 2.6rem; }
+  .intro { gap: 1.2rem; }
+  .portrait { width: 104px; height: 104px; }
   h1 { font-size: 2rem; }
   .paper { grid-template-columns: 1fr; gap: 1rem; }
   .paper-img { max-width: 420px; }
