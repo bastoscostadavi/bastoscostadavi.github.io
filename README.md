@@ -1,6 +1,6 @@
 # bastoscostadavi.github.io
 
-Personal academic website — two pages, About (`index.html`) and Publications (`publications.html`).
+Personal academic website: two pages, About (`index.html`) and Publications (`publications.html`).
 
 Plain static HTML + one stylesheet (`css/style.css`). No build step, no dependencies.
 MathJax is loaded from a CDN on the publications page to render LaTeX in abstracts.
