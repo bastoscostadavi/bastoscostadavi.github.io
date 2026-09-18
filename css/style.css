@@ -128,7 +128,7 @@ a:hover { color: var(--link-hover); text-decoration: underline; }
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.4rem 1.4rem;
+  gap: 0.4rem 1rem;
   margin: 0.2rem 0 2.6rem;
 }
 
