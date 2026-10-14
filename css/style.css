@@ -79,9 +79,9 @@ nav a.logo-cycle:hover { color: var(--link-hover); }
 
 nav a.logo-letters {
   color: var(--logo-letters);
-  font-family: "Great Vibes", "Snell Roundhand", "Apple Chancery", cursive;
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
   line-height: 1;
 }
 
