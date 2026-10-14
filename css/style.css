@@ -63,7 +63,7 @@ nav a:hover { color: var(--fg); }
 
 nav a[aria-current="page"] { color: var(--fg); font-weight: 600; }
 
-nav a.logo {
+nav .logo {
   margin-left: auto;
   display: inline-flex;
   align-items: baseline;
@@ -71,15 +71,12 @@ nav a.logo {
   white-space: nowrap;
 }
 
-nav a.logo:hover { text-decoration: none; }
-
-.logo-cycle {
+nav a.logo-cycle {
   color: var(--link);
   font-size: 0.95rem;
-  transition: color 0.15s ease;
 }
 
-nav a.logo:hover .logo-cycle { color: var(--link-hover); }
+nav a.logo-cycle:hover { color: var(--link-hover); }
 
 .logo-letters {
   color: var(--logo-letters);
