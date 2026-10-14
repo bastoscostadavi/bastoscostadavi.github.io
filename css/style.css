@@ -64,7 +64,6 @@ nav a:hover { color: var(--fg); }
 nav a[aria-current="page"] { color: var(--fg); font-weight: 600; }
 
 nav .logo {
-  margin-left: auto;
   display: inline-flex;
   align-items: baseline;
   gap: 0.1rem;
@@ -78,12 +77,15 @@ nav a.logo-cycle {
 
 nav a.logo-cycle:hover { color: var(--link-hover); }
 
-.logo-letters {
+nav a.logo-letters {
   color: var(--logo-letters);
   font-family: "Great Vibes", "Snell Roundhand", "Apple Chancery", cursive;
   font-size: 1.6rem;
+  font-weight: 400;
   line-height: 1;
 }
+
+nav a.logo-letters:hover { text-decoration: none; }
 
 /* ---------- layout ---------- */
 
