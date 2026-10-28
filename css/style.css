@@ -55,6 +55,7 @@ nav {
 }
 
 nav a {
+  white-space: nowrap;
   color: var(--muted);
   text-decoration: none;
   font-size: 0.95rem;
@@ -65,9 +66,37 @@ nav a:hover { color: var(--fg); }
 
 nav a[aria-current="page"] { color: var(--fg); font-weight: 600; }
 
-.theme-toggle {
+.nav-tools {
   margin: -0.4rem 0 -0.4rem auto;
   align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.lang-toggle {
+  height: 32px;
+  padding: 0 0.5rem;
+  border: 0;
+  border-radius: 16px;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.lang-toggle:hover { background: var(--soft); }
+
+:root[lang="en"] .lang-toggle .en,
+:root[lang="pt-BR"] .lang-toggle .pt { color: var(--fg); font-weight: 600; }
+
+/* EN/PT text pairs, switched by js/lang.js */
+:root[lang="pt-BR"] [data-lang="en"],
+:root[lang="en"] [data-lang="pt"] { display: none; }
+
+.theme-toggle {
   width: 32px;
   height: 32px;
   display: grid;
@@ -308,6 +337,10 @@ details.abs[open] > summary::after { content: " ‹"; }
 }
 
 @media (max-width: 520px) {
+  .nav-inner { gap: 0.75rem; padding-left: 16px; padding-right: 16px; }
+  nav a { font-size: 0.9rem; }
+  .nav-tools { gap: 0; margin-right: -6px; }
+  .lang-toggle { padding: 0 0.35rem; }
   .intro {
     flex-direction: column;
     align-items: flex-start;
